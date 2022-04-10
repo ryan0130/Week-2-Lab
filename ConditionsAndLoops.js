@@ -91,7 +91,13 @@ do {
 
 
 // edit the previous do/while loop so that it prints the remainder when the loop number is divided by 4
-
+let j = 1;
+do {
+    if (j % 4 === 0) {
+        console.log(j);
+    }
+    j++;
+} while(j <= 50)
 
 // Someone messed up the following for loop
 // fix the following infinite loop, uncomment to test
