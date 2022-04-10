@@ -17,21 +17,33 @@ if (mySpeed > speedLimit) {
 
 // create two variables, one named alarmSet, the other openDoor
 // set them to a boolean value
-
+let alarmSet = true;
+let openDoor = true;
 
 // using a conditional, determine if alarm is set. 
 // if alarm is set and door is set to open, print "Sound Alarm!" to the console
 // otherwise, print "Everything is fine." to the console.
-
-
+if (alarmSet && openDoor) {
+    console.log("Sound Alarm!");
+} else {
+    console.log("Everything is fine.");
+}
 
 
 // create two variables, username and password
 // create a conditional, if the username is "Tommy123" and the password is "12345"
 // or the username is "Timmy456" and the password is "6789", print "Admin Login Successful" to the console
 // otherwise, print "Admin Access Denied"
+let username = "Tommy123";
+let password = "12345";
 
-
+if (username == "Tommy123" || username == "Timmy456") {
+    if(password == "12345") {
+        console.log("Admin Login Successful");
+    } else {
+        console.log("Admin Access Denied");
+    }
+}
 
 
 // write code that will set the value of studentClass based on studentGrade
@@ -40,13 +52,42 @@ if (mySpeed > speedLimit) {
 // 7-8 will be Middle
 // 9 will be Freshman, 10 Sophomore, 11 Junior, 12 Senior
 // Anything other than these values will return "Error" to the console
+let studentClass = 'K-11';
+let studentGrade = '';
 
+switch(studentClass) {
+    case 'K-12':
+        studentGrade = "Senior";
+        break;
+    case 'K-11':
+        studentGrade = "Junior";
+        break;
+    case 'K-10':
+        studentGrade = "Sophomore";
+        break;
+    case 'K-9':
+        studentGrade = "Freshman";
+        break;
+    case 'K-7-8':
+        studentGrade = "Middle";
+        break;
+    case 'K-6':
+        studentGrade = "Elementary";
+        break;
+    default:
+        studentGrade = "Error";
+}
+console.log(studentGrade);
 
 // write a for loop that will iterate backwards from 10 to -10
 
 
-
 // write a do/while loop that prints 1 through 50
+let i = 1;
+do {
+    console.log(i);
+    i++;
+} while(i <= 50)
 
 
 // edit the previous do/while loop so that it prints the remainder when the loop number is divided by 4
