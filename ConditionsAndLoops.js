@@ -37,12 +37,10 @@ if (alarmSet && openDoor) {
 let username = "Tommy123";
 let password = "12345";
 
-if (username == "Tommy123" || username == "Timmy456") {
-    if(password == "12345") {
-        console.log("Admin Login Successful");
-    } else {
-        console.log("Admin Access Denied");
-    }
+if ((username === "Tommy123" && password === "12345") || (username === "Timmy456" && password === "6789")) {
+    console.log("Admin Login Successful");
+} else {
+    console.log("Admin Access Denied");
 }
 
 
@@ -52,32 +50,38 @@ if (username == "Tommy123" || username == "Timmy456") {
 // 7-8 will be Middle
 // 9 will be Freshman, 10 Sophomore, 11 Junior, 12 Senior
 // Anything other than these values will return "Error" to the console
-let studentClass = 'K-11';
-let studentGrade = '';
+let studentGrade = 'K-11';
+let studentClass;
 
-switch(studentClass) {
+switch(studentGrade) {
     case 'K-12':
-        studentGrade = "Senior";
+        studentClass = "Senior";
         break;
     case 'K-11':
-        studentGrade = "Junior";
+        studentClass = "Junior";
         break;
     case 'K-10':
-        studentGrade = "Sophomore";
+        studentClass = "Sophomore";
         break;
     case 'K-9':
-        studentGrade = "Freshman";
+        studentClass = "Freshman";
         break;
     case 'K-7-8':
-        studentGrade = "Middle";
+        studentClass = "Middle";
         break;
-    case 'K-6':
-        studentGrade = "Elementary";
+    case 'K':
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+        studentClass = "Elementary";
         break;
     default:
-        studentGrade = "Error";
+        studentClass = "Error";
 }
-console.log(studentGrade);
+console.log(studentClass);
 
 // write a for loop that will iterate backwards from 10 to -10
 for (let i = 10; i > -11; i--) {
